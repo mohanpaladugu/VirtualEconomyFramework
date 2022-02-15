@@ -35,7 +35,7 @@ jobs:
    #   with:
         
    #     app-name: '${{env.AZURE_WEB_APP}}'
-        # Applies to Web App only: Publish profile (*.publishsettings) file contents with Web Deploy secrets
+        # Applies to Web App only: Publish profile (*.publishsettings) file contents with Web Deploy secrets actions
    #     publish-profile: ${{ secrets.AZURE_APP_PUBLISH_PROFILE }}
         # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
     #    package: '${{env.PUBLISH_PATH}}/publish'

@@ -5,7 +5,8 @@ name: .NET build1
 on:
   push:
     branches: [ Test_CI_CD_MockDev ]
-  
+env:
+  PUBLISH_PATH: '.'
 
 jobs:
   build:

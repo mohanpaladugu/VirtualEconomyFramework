@@ -1,10 +1,6 @@
 name: .NET buildfork
 
-on:
-  push:
-    branches: [ Test_CI_CD_MockDev ]
-  pull_request:
-    types: [opened, synchronize, reopened]  
+on: [push]  
 
 jobs:
   build:

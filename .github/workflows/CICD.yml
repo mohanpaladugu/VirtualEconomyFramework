@@ -29,7 +29,8 @@ jobs:
       run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
       
     - name: Executing Unit Test
-      run: dotnet test ./VirtualEconomyFramework/VENFTApp-Server
+     # run: dotnet test ./VirtualEconomyFramework/VENFTApp-Server
+      run: dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest
       
     - name: Publish
       run: dotnet publish ./VirtualEconomyFramework/VENFTApp-Server --configuration Release -o '${{env.PUBLISH_PATH}}/publish'

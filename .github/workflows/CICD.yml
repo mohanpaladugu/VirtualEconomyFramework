@@ -7,6 +7,7 @@ on:
     branches: [ Test_CI_CD_MockDev ]
 env:
   PUBLISH_PATH: '.'
+  AZURE_WEB_APP: 'testvenftappserver'
 
 jobs:
   build:

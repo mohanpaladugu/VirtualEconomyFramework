@@ -1,4 +1,4 @@
-name: .NET build and Deployment
+name: .NET build
 
 #on: [push]
 

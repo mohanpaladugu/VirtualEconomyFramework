@@ -1,7 +1,7 @@
 name: .NET
 
 on:
-  push:
+  pull_request:
     branches: [ Test_CI_CD_MockDev ]
 
 jobs:

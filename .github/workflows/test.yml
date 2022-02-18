@@ -18,8 +18,8 @@ jobs:
     
     - name: Install dependencies
       run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
- #   - name: Build
- #     run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
+    - name: Build
+      run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
    
     - name: Executing Unit Test
       run: dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest

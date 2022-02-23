@@ -1,7 +1,7 @@
-name: Release
+name: dotnet-desktop
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build:

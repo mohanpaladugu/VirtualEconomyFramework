@@ -1,8 +1,10 @@
 name: .NET pull request build
 
+#on:
+ # pull_request:
+ #   branches: [Test_CI_CD_MockDev]
 on:
-  pull_request:
-    branches: [Test_CI_CD_MockDev]
+ workflow_dispatch:
 
 jobs:
   build:

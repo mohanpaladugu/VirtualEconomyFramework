@@ -1,4 +1,4 @@
-name: SampleDispatch
+name: .NET pull request build
 
 #on:
  # pull_request:

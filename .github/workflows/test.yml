@@ -5,7 +5,7 @@ name: .NET pull request build
  #   branches: [Test_CI_CD_MockDev]
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build:

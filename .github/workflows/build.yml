@@ -45,6 +45,7 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /o:"mohanpaladugu" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
           dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
-          dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest --no-build --collect:"XPlat Code Coverage"
-          dotnet reportgenerator "-reports:*\TestResults\*\coverage.cobertura.xml" "-targetdir:sonarqubecoverage" "-reporttypes:SonarQube"
+          $TestOutput = dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest --test "XPlat Code Coverage"
+          $CoverageReports = $TestOutput | Select-String coverage.cobertura.xml | ForEach-Object { $_.Line.Trim() } | Join-String -Separator ';'
+           dotnet reportgenerator "-reports:$CoverageReports" "-targetdir:./CoverageReport" "-reporttype:Html"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

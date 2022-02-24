@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - Test_CI_CD_MockDev
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:

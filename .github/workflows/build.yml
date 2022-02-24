@@ -49,5 +49,5 @@ jobs:
           coverlet ./VirtualEconomyFramework/VEFrameworkUnitTest --target "dotnet"
           dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest --collect:"XPlat Code Coverage"
           dotnet tool install -g donet-reportgenerator-globaltool
-          reportgenerator -reports:"*\TestResults\*\coverage.cobertura.xml" -targetdir:"sonarqubecoverage" -reporttypes:"SonarQube"
+          dotnet reportgenerator -reports:"*\TestResults\*\coverage.cobertura.xml" -targetdir:"sonarqubecoverage" -reporttypes:"SonarQube"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

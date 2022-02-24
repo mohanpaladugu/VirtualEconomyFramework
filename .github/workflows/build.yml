@@ -46,6 +46,6 @@ jobs:
           dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
           dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
           $TestOutput = dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest --test "XPlat Code Coverage"
-          $CoverageReports = $TestOutput | Select-String coverage.cobertura.xml | ForEach-Object { $_.Line.Trim() } | Join-String -Separator ';'
+          $CoverageReports = $TestOutput | Select-String coverage.cobertura.xml | ForEach-Object { $_.Line.Trim() } | Join-String -Property Name -Separator ';'
            dotnet reportgenerator "-reports:$CoverageReports" "-targetdir:./CoverageReport" "-reporttype:Html"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

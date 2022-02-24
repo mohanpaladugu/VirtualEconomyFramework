@@ -49,6 +49,6 @@ jobs:
           dotnet tool install -g coverlet.console
           coverlet .\VirtualEconomyFramework\VEFrameworkUnitTest\bin\Debug\netcoreapp3.1\VEFrameworkUnitTest.dll --target "dotnet"
           dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest --collect:"XPlat Code Coverage"
-          dotnet tool install -g dotnet-reportgenerator-globaltool
-          dotnet reportgenerator -reports:"*\TestResults\*\coverage.cobertura.xml" -targetdir:"sonarqubecoverage" -reporttypes:"SonarQube"
+          #dotnet tool install -g dotnet-reportgenerator-globaltool
+          dotnet reportgenerator -reports:".\VirtualEconomyFramework\VEFrameworkUnitTest\TestResults\*\coverage.cobertura.xml" -targetdir:"sonarqubecoverage" -reporttypes:"SonarQube"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

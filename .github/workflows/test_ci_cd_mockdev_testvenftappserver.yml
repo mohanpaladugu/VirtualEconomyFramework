@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - testvenftappservers
 on:
   push:
     branches:
-      - Test_CI_CD_MockDev
+      - Main
   workflow_dispatch:
 
 jobs:

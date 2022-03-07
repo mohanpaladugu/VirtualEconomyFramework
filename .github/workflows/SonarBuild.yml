@@ -26,7 +26,7 @@ jobs:
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       with:
-       projectBaseDir: my-custom-directory
+       projectBaseDir: .
         -Dsonar.organization=mohanpaladugu
         -Dsonar.projectKey=mohanpaladugu_VirtualEconomyFramework
       env:

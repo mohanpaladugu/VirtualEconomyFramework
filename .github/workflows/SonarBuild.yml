@@ -46,5 +46,5 @@ jobs:
           dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
           dotnet build  ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
           dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml
-          sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/TestResults/Coverage/coverage.opencover.xml
+          reportgenerator -reports:".\VirtualEconomyFramework\VEFrameworkUnitTest\TestResults\Coverage/coverage.opencover.xml"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

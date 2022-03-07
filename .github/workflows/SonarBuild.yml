@@ -1,9 +1,7 @@
 name: Build with sonarqubes
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ Test_CI_CD_MockDev ]
 
 jobs:
   build:

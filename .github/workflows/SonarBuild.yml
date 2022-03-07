@@ -1,7 +1,7 @@
 name: Build with the sonarqubes
 on:
   push:
-    branches: [ Test_CI_CD_MockDev ]
+    branches: [ Main ]
 
 jobs:
   build:

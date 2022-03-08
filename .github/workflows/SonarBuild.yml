@@ -23,6 +23,7 @@ jobs:
       run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
     - name: Test
       run: dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml
+   
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       with:

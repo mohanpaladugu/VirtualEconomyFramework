@@ -45,11 +45,10 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /o:"mohanpaladugu" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
           dotnet build  ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
-          #dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj
+          dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj
           dotnet tool install -g coverlet.console
-          dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj --collect:"XPlat Code Coverage"
-          coverlet .\VirtualEconomyFramework\VEFrameworkUnitTest\bin\Debug\netcoreapp3.1\VEFrameworkUnitTest.dll --target "dotnet"
-          
+          coverlet .\VirtualEconomyFramework\VEFrameworkUnitTest\bin\Debug\netcoreapp3.1\VEFrameworkUnitTest.dll --target "dotnet" --targetargs"test --no-build"
+          dotnet test  --collect:"XPlate Code Coverage" 
           dotnet tool install -g dotnet-reportgenerator-globaltool;
-          reportgenerator -reports:".\VirtualEconomyFramework\VEFrameworkUnitTest\TestResults\*\coverage.cobertura.xml" -targetdir:"sonarqubecoverage" -reporttypes:"SonarQube"
+          reportgenerator -reports:".\.\TestResults\*\coverage.cobertura.xml" -targetdir:"coverageresults" -reporttypes:Html
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

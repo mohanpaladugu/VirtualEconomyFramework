@@ -1,0 +1,37 @@
+name: Builds with the a sonarqubes
+on:
+  push:
+    branches: [ Test_CI_CD_MockDev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting for sonarcloud
+        fetch-depth: 0
+    - name: Setup .Net SDK 
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+    - name: Install dependencies
+      run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
+        
+    - name: Build
+      run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
+    - name: Test
+      run: dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml
+   
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      with:
+       projectBaseDir: .
+        -Dsonar.organization=mohanpaladugu
+        -Dsonar.projectKey=mohanpaladugu_VirtualEconomyFramework
+        -Dsonar.python.coverage.reportPaths=opencover.xml
+        sonar.cfamily.build-wrapper-output=build_wrapper_output_directory
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -1,0 +1,53 @@
+name: .NET build json file replaces
+
+#on: [push]
+
+on:
+  push:
+    branches: [ Test_CI_CD_MockDev ]
+env:
+  PUBLISH_PATH: '.'
+  AZURE_WEB_APP: 'testvenftappserver'
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+        
+    - name: Install dependencies
+      run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
+   
+    - name: Build
+      run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
+      
+   # - name: Executing Unit Test
+     # run: dotnet test ./VirtualEconomyFramework/VENFTApp-Server
+     # run: dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest
+      
+    - name: Publish
+      run: dotnet publish ./VirtualEconomyFramework/VENFTApp-Server --configuration Release -o '${{env.PUBLISH_PATH}}/publish'
+      
+    - name: create-json
+      id: create-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: "appsettings.json"
+        json: ${{ secrets.APPLICATION_JSON_REPLACE }}
+        dir: './publish/'
+        
+    - name: Azure WebApp
+      uses: Azure/webapps-deploy@v2
+      with:
+        app-name: '${{env.AZURE_WEB_APP}}'
+        # Applies to Web App only: Publish profile (*.publishsettings) file contents with Web Deploy secrets
+        publish-profile: ${{ secrets.AZURE_APP_PUBLISH_PROFILE_DEV }}
+        # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
+        package: '${{env.PUBLISH_PATH}}/publish'

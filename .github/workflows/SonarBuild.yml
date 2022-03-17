@@ -31,7 +31,7 @@ jobs:
         -Dsonar.organization=mohanpaladugu
         -Dsonar.projectKey=mohanpaladugu_VirtualEconomyFramework
         -Dsonar.python.coverage.reportPaths=opencover.xml
-        sonar.cfamily.build-wrapper-output=build_wrapper_output_directory
+        
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -1,4 +1,4 @@
-name: Builds with the a sonarqube
+name: Build with the a sonarqube
 on:
   push:
     branches: [ Test_CI_CD_MockDev ]

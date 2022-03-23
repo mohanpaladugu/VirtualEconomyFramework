@@ -28,9 +28,10 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       with:
        projectBaseDir: .
-        -Dsonar.organization=mohanpaladugu
-        -Dsonar.projectKey=mohanpaladugu_VirtualEconomyFramework
-        -Dsonar.cs.opencover.reportsPaths=opencover.xml
+        sonar.organization=mohanpaladugu
+        sonar.projectKey=mohanpaladugu_VirtualEconomyFramework
+        sonar.cs.analyzeGeneratedCode=true
+        sonar.cs.opencover.reportsPaths=opencover.xml
         
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

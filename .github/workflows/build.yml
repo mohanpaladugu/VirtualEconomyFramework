@@ -1,4 +1,4 @@
-name: Builds sonarqube with latest code
+name: Builds latest code
 on:
   push:
     branches:

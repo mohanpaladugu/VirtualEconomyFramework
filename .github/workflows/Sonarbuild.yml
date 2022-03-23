@@ -45,7 +45,7 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /o:"mohanpaladugu" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=coverage.xml
           dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
           dotnet build  ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
-          #dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj
+          dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj
           dotnet tool install coverlet.console -g
           dotnet add package coverlet.collector --version 3.1.2
           coverlet .\VirtualEconomyFramework\VEFrameworkUnitTest\bin\Debug\netcoreapp3.1\VEFrameworkUnitTest.dll --target "dotnet" --targetargs "test --no-build" -f=opencover -o="coverage.xml"

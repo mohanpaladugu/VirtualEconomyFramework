@@ -1,4 +1,4 @@
-name: Build with sonarqube with latest
+name: Build the sonarqube with latest
 on:
   push:
     branches:

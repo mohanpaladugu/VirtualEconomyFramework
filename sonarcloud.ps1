@@ -23,7 +23,8 @@ $branch = git branch --show-current
 Write-Host "branch is $branch"
 
 dotnet tool restore
-dotnet tool run dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /v:"$assemblyVer" /o:"mohanpaladugu" /d:sonar.login="$sonarSecret" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestResults/*/coverage.opencover.xml /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.branch.name="$branch"
+dotnet tool install --global dotnet-sonarscanner
+dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /v:"$assemblyVer" /o:"mohanpaladugu" /d:sonar.login="$sonarSecret" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestResults/*/coverage.opencover.xml /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.branch.name="$branch"
 
 dotnet restore src
 dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration release

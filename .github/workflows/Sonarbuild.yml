@@ -1,4 +1,4 @@
-name: Buildingggg latest code from 
+name: latest code from 
 on:
   push:
     branches:

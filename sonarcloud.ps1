@@ -28,6 +28,6 @@ dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /v:"$assemb
 
 dotnet restore ./VirtualEconomyFramework/VENFTApp-Server
 dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration release
-dotnet test "./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj" --collect:"XPlat Code Coverage" --results-directory TestResults/ --logger "trx;LogFileName=unittests.trx" --no-build --no-restore --configuration release -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+dotnet test "./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml --collect:"XPlat Code Coverage" --results-directory TestResults/ --logger "trx;LogFileName=unittests.trx" --no-build --no-restore --configuration release -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
          
 dotnet-sonarscanner end /d:sonar.login="$sonarSecret"

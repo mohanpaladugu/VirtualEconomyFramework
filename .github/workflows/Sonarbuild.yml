@@ -47,7 +47,6 @@ jobs:
           dotnet build  ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
           dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj
           dotnet tool install coverlet.console -g
-          dotnet add package coverlet.collector --version 3.1.2
           coverlet .\VirtualEconomyFramework\VEFrameworkUnitTest\bin\Debug\netcoreapp3.1\VEFrameworkUnitTest.dll --target "dotnet" --targetargs "test --no-build" -f=opencover -o="coverage.xml"
           dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml --collect:"XPlat Code Coverage"
           dotnet tool install -g dotnet-reportgenerator-globaltool;

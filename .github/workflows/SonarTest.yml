@@ -44,13 +44,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          param(
-            [string] $sonarSecret
-              )
+          
 
 
-            Install-package BuildUtils -Confirm:$false -Scope CurrentUser -Force
-            Import-Module BuildUtils
+          Install-package BuildUtils -Confirm:$false -Scope CurrentUser -Force
+          Import-Module BuildUtils
 
           $runningDirectory = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
 
@@ -62,14 +60,8 @@ jobs:
            Remove-Item $testOutputDir -Recurse -Force
           }
 
-              $version = Invoke-Gitversion
-             $assemblyVer = $version.assemblyVersion 
 
-             $branch = git branch --show-current
-            Write-Host "branch is $branch
-
-
-           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /o:"mohanpaladugu" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestResults/*/coverage.opencover.xml /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.branch.name="$branch"
+           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /o:"mohanpaladugu" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestResults/*/coverage.opencover.xml /d:sonar.coverage.exclusions="**Test*.cs" 
            dotnet restore ./VirtualEconomyFramework/VENFTApp-Server
            dotnet test "./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj" --collect:"XPlat Code Coverage" --results-directory TestResults/ --logger "trx;LogFileName=unittests.trx" --no-build --no-restore --configuration release -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
            dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration release

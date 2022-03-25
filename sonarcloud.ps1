@@ -24,10 +24,10 @@ Write-Host "branch is $branch"
 
 dotnet tool restore
 dotnet tool install --global dotnet-sonarscanner
-dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework" /v:"$assemblyVer" /o:"mohanpaladugu" /d:sonar.login="$sonarSecret" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=/**/*.*.xml
+dotnet-sonarscanner begin /k:"mohanpaladugu_VirtualEconomyFramework"  /o:"mohanpaladugu" /d:sonar.login="$sonarSecret" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=/**/*.*.xml
 
 dotnet restore ./VirtualEconomyFramework/VENFTApp-Server
 dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration release
-dotnet test "./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml --collect:"XPlat Code Coverage" --results-directory TestResults/ --logger "trx;LogFileName=unittests.trx" --no-build --no-restore --configuration release -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+dotnet test "./VirtualEconomyFramework/VEFrameworkUnitTest/VEFrameworkUnitTest.csproj"  --collect:"XPlat Code Coverage" --results-directory TestResults/ --logger "trx;LogFileName=unittests.trx" --no-build --no-restore --configuration release -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
          
 dotnet-sonarscanner end /d:sonar.login="$sonarSecret"

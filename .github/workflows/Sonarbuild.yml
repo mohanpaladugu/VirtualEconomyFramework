@@ -1,4 +1,4 @@
-name: latestcode Build from Test_CI_CD_MockDev2
+name: latestcode from Test_CI_CD_MockDev2
 on:
   push:
     branches:

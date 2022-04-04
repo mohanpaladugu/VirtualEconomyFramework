@@ -1,8 +1,8 @@
-name: latests from Test_CI_CD_MockDev2
+name: latests from Sonarqube_Branch
 on:
   push:
     branches:
-      - Test_CI_CD_MockDev2
+      - Sonarqube_Branch
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:

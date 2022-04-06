@@ -1,0 +1,32 @@
+name: docfx-build-publish
+
+on:
+  push:
+    branches: [ mohanpaladugu-patch-1 ]
+  pull_request:
+    branches: [ mohanpaladugu-patch-1 ]
+jobs:
+  generate-docs:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+         dotnet-version: '3.1.x'
+      - name: Setup DocFX
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install docfx
+      - name: Install dependencies
+        run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
+      - name: DocFX Build
+        working-directory: docs
+        run: docfx docfx.json
+        continue-on-error: false
+      - name: Publish
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_site

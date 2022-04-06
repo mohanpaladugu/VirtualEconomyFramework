@@ -10,7 +10,6 @@
             "dest": "_ref",
             "disableGitFeatures": false,
             "disableDefaultFilter": false,
-            "filter": "filterConfig.yml"
         }
     ],
     "build": {

@@ -18,10 +18,11 @@ jobs:
       - name: Setup DocFX
         uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: docfx init -o docs -q
+          args: install docfx
           
       - name: Install dependencies
         run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
+        
       - name: DocFX Build
         working-directory: docs
         run: docfx docfx.json

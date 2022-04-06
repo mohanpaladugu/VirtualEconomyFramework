@@ -18,15 +18,16 @@ jobs:
       - name: Setup DocFX
         uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: install docfx
+          args: docfx init -o docs -q
+          
       - name: Install dependencies
         run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
       - name: DocFX Build
-        
+        working-directory: docs
         run: docfx docfx.json
         
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
+          publish_dir: docs/_site

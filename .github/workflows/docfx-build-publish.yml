@@ -1,4 +1,4 @@
-name: docfx-build-publish
+name: docfx-build-publishs
 
 on:
   push:

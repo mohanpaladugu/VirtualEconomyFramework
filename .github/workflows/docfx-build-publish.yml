@@ -21,7 +21,7 @@ jobs:
           args: install docfx
           
       - name: Install dependencies
-        run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
+        run: dotnet restore  ./VirtualEconomyFramework/VEDriversLite
         
       - name: DocFX Build
         working-directory: docs

@@ -6,7 +6,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "C:\\repositories\\VirtualEconomyFramework\\VirtualEconomyFramework\\VEDriversLite"
+          "src": "D:\a\VirtualEconomyFramework\VirtualEconomyFramework\VirtualEconomyFramework\VEDriversLite"
         }
       ],
       "dest": "api",

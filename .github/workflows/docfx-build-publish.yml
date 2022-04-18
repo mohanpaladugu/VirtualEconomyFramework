@@ -24,11 +24,11 @@ jobs:
         run: dotnet restore  ./VirtualEconomyFramework/VEDriversLite
         
       - name: DocFX Build
-        working-directory: ./VirtualEconomyFramework/VEDriversLite
+        working-directory: ./docfx_project
         run: docfx docfx.json
         
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./VirtualEconomyFramework/VEDriversLite
+          publish_dir: ./docfx_project

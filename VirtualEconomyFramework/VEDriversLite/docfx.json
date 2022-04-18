@@ -3,10 +3,9 @@
     {
       "src": [
         {
+         "src": "../",
           "files": [
             "**.csproj"
-          ],
-          "src": "./VirtualEconomyFramework/VirtualEconomyFramework/VirtualEconomyFramework/VEDriversLite"
         }
       ],
       "dest": "api",

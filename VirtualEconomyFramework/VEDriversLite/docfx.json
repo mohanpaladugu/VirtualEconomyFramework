@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "../",
+          "src": "../../",
           "files": [
             "**.csproj"
           ]
@@ -50,7 +50,7 @@
         ]
       }
     ],
-    "dest": "./VirtualEconomyFramework/VEDriversLite/_site",
+    "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

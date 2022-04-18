@@ -50,7 +50,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "./VirtualEconomyFramework/VEDriversLite/_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

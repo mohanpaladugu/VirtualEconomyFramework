@@ -26,6 +26,9 @@ jobs:
       - name: DocFX Build
         working-directory: ./VirtualEconomyFramework/VEDriversLite/
         run: docfx docfx.json
+     
+      - name: Build the Docfx
+        run: docfx ./VirtualEconomyFramework/VEDriversLite/docfx.json --serve
         
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3

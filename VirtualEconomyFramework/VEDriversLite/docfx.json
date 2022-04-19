@@ -53,7 +53,7 @@
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template":["default","templates/singulinkfx"],
+    "template":["default","docfx-tmpl/src"],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,

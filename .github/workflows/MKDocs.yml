@@ -1,1 +1,27 @@
+name: docfx-build-publish
 
+on:
+  push:
+    branches: [ mohanpaladugu-patch-1 ]
+  pull_request:
+    branches: [ mohanpaladugu-patch-1 ]
+jobs:
+  generate-docs:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+         python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material
+          
+      - name: Deploy
+        run: |
+          git pull
+          mkdocs gh-deploy
+        

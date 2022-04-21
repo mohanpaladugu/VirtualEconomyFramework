@@ -1,4 +1,4 @@
-name: docfx-build-publish
+name: MKDocs.YML
 
 on:
   push:

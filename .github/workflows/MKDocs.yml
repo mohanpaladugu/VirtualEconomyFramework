@@ -1,4 +1,4 @@
-name: MKDocs.YML
+name: MKDoc.YML
 
 on:
   push:

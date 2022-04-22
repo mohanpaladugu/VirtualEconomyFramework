@@ -1,0 +1,32 @@
+
+# Project information
+site_name: 'VirtualEconomyFramework'
+site_description: 'VirtualEconomyFramework'
+
+# Repository
+repo_name: 'mohanpaladugu/VirtualEconomyFramework'
+repo_url: 'https://github.com/mohanpaladugu/VirtualEconomyFramework'
+
+# Configuration
+theme:
+  name: 'material'
+  palette:
+    primary: 'blue'
+    accent: 'light blue'
+
+# Left navigation
+nav:
+  - 'index.md'
+  
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: true
+      linenums: true
+  - toc:
+      permalink: true
+plugins:
+  - search
+  - markdownextradata

@@ -20,7 +20,10 @@ jobs:
           pip install --upgrade pip
           pip install mkdocs
           pip install mkdocs-material
-          mkdocs new SampleDocs
-          cd SampleDocs
-          mkdocs serve
+          
+      - name: Deploy
+        run: |
+          git pull
+          mkdocs gh-deploy --config-file ../VirtualEconomyFramework/mkdocs.yml
+        
         

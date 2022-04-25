@@ -18,4 +18,5 @@ jobs:
       - name: Install dependencies
         run: |
           dotnet tool install -g Microsoft.dotnet-try
+          cd ./VirtualEconomyFramework/VEDriversLite/
           dotnet try

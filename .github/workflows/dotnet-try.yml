@@ -1,0 +1,22 @@
+name: dotnet-try.YML
+
+on:
+  push:
+    branches: [ mohanpaladugu-patch-2 ]
+  pull_request:
+    branches: [ mohanpaladugu-patch-2 ]
+jobs:
+  generate-docs:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup .Net SDK 
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+      - name: Install dependencies
+        run: |
+          dotnet tool install -g Microsoft.dotnet-try
+          cd ./VirtualEconomyFramework/VEDriversLite/
+          dotnet try

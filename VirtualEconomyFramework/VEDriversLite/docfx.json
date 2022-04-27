@@ -53,7 +53,7 @@
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template":["default","docfx-tmpl/src"],
+    "template":["default","templates/discordfx"],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,

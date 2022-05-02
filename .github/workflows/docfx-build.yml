@@ -2,9 +2,9 @@ name: docfx-build-Development
 
 on:
   push:
-    branches: [ mohanpaladugu-patch-1 ]
+    branches: [ DocFX_Branch_LatestCode ]
   pull_request:
-    branches: [ mohanpaladugu-patch-1 ]
+    branches: [ DocFX_Branch_LatestCode ]
 jobs:
   generate-docs:
     runs-on: windows-latest

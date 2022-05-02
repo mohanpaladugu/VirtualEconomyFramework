@@ -1,10 +1,10 @@
-name: docfx-build-publishs
+name: docfx-build_TestBranch
 
 on:
   push:
-    branches: [ mohanpaladugu-patch-1 ]
+    branches: [ DocFX_TestBranch ]
   pull_request:
-    branches: [ mohanpaladugu-patch-1 ]
+    branches: [ DocFX_TestBranch ]
 jobs:
   generate-docs:
     runs-on: windows-latest
@@ -24,11 +24,11 @@ jobs:
         run: dotnet restore  ./VirtualEconomyFramework/VEDriversLite
         
       - name: DocFX Build
-        working-directory: ./VirtualEconomyFramework/VEDriversLite/
+        working-directory: ./docfx
         run: docfx docfx.json
      
       - name: Build the Docfx
-        run: docfx ./VirtualEconomyFramework/VEDriversLite/docfx.json --serve
+        run: docfx ./docfx/docfx.json --serve
         
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3

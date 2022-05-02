@@ -27,8 +27,8 @@
         "files": [
           "articles/**.md",
           "articles/**/toc.yml",
-          "toc.yml",
-          "*.md"
+          "./docfx/toc.yml",
+          "./docfx/*.md"
         ]
       }
     ],

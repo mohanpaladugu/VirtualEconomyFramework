@@ -3,10 +3,11 @@
     {
       "src": [
         {
+          "src": "../",
           "files": [
             "**.csproj"
           ],
-          "src": "C:\\repositories\\VirtualEconomyFramework\\VirtualEconomyFramework\\VEDriversLite"
+          
         }
       ],
       "dest": "api",

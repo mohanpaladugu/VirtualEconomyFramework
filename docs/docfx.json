@@ -1,0 +1,49 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+			"files": [ "**/**.csproj" ],
+			"src": ".."
+                }
+            ],
+            "dest": "_ref",
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false,
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [
+                    "_ref/**.yml",
+                    "_ref/index.md"
+                ]
+            },
+            {
+                "files": [
+                    "Overview/toc.yml",
+                    "Overview/**.md",
+                    "Overview/**/toc.yml",
+                    "toc.yml",
+                    "*.md"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [ "images/**" ]
+            }
+        ],
+        "dest": "../docs",
+        "globalMetadataFiles": [],
+        "fileMetadataFiles": [],
+        "template": [ "default" ],
+        "postProcessors": [],
+        "markdownEngineName": "markdig",
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "disableGitFeatures": false
+    }
+}

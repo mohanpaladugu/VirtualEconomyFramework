@@ -1,1 +1,29 @@
+name: Nuget Publish Package Build
 
+on:
+  push:
+    branches: [ DocFX_TestBranch ]
+  pull_request:
+    branches: [ DocFX_TestBranch ]
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+    
+   # - name: Install dependencies
+   #   run: dotnet restore  ./VirtualEconomyFramework/VEDriversLite
+   # - name: Build
+   #   run: dotnet build ./VirtualEconomyFramework/VEDriversLite --configuration Release --no-restore
+   
+    - name: Publish VEDriversLite
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: ./VirtualEconomyFramework/VEDriversLiteVEDriversLite.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}

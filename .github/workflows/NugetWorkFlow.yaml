@@ -1,4 +1,4 @@
-name: Nuget Publish Package Build
+name: Nuget Publish Package Builds
 
 on:
   push:

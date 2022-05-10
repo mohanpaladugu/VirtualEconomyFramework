@@ -3,9 +3,9 @@
     {
       "src": [
         {
-          "src": "../../",
+          "src": "../../VEDriversLite/",
           "files": [
-            "./VirtualEconomyFramework/VirtualEconomyFramework/VEDriversLite/**.csproj"
+            "**.csproj"
           ]
           
         }

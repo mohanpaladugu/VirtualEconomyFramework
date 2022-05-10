@@ -3,9 +3,9 @@
     {
       "src": [
         {
-          "src": "../../",
+          "src": "..",
           "files": [
-            "*Lite/**.csproj"
+            "VEDriversLite/**.csproj"
           ]
           
         }

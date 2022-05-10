@@ -1,4 +1,4 @@
-name: docfx-build-Developments
+name: docfx-build-Development
 
 on:
   push:

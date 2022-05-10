@@ -5,7 +5,7 @@
         {
           "src": "../../",
           "files": [
-            "./VirtualEconomyFramework/VEDriversLite/**.csproj"
+            "*Lite/**.csproj"
           ]
           
         }

@@ -4,7 +4,7 @@
       "src": [
         {
           "files": [
-            "D:\a\VirtualEconomyFramework\VirtualEconomyFramework\VirtualEconomyFramework\VEDriversLite\VEDriversLite.csproj"
+            "D:/a/VirtualEconomyFramework/VirtualEconomyFramework/VirtualEconomyFramework/VEDriversLite/VEDriversLite.csproj"
           ],
 		  "exclude":["**/bin/**","**/obj/**"],
 		  "src": ".."

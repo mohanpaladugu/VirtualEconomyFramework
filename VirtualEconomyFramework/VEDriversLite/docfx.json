@@ -3,11 +3,11 @@
     {
       "src": [
         {
+          "src": "../../",
           "files": [
-            "D:/a/VirtualEconomyFramework/VirtualEconomyFramework/VirtualEconomyFramework/VEDriversLite/VEDriversLite.csproj"
-          ],
-		  "exclude":["**/bin/**","**/obj/**"],
-		  "src": ".."
+            "**.csproj"
+          ]
+          
         }
       ],
       "dest": "api",

@@ -5,8 +5,7 @@
         {
           "src": "..",
           "files": [
-            "VEDriversLite/**.csproj",
-            "VEDriversLite.NeblioAPI/VEDriversLite.NeblioAPI.csproj"
+            "VEDriversLite/**.csproj","VEDriversLite.NeblioAPI/VEDriversLite.NeblioAPI.csproj"
           ]
           
         }

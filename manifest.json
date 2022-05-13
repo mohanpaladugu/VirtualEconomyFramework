@@ -185,6 +185,138 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderAddress.html",
+          "hash": "Btt/NQdxUkqpmHz1r1QvvpS6kyyHkwjUvSlszKLZcR0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderOutput.html",
+          "hash": "henVOKBdVz3HkVOnMkNq7K/hW907qCmcumJ1h/JG6hA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderTransaction.html",
+          "hash": "1k9woJvo3nr0ZM/jbBP4RrClViNgogLnnJ8MJlcRXh0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderUtxo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NeblioBuilderUtxo.html",
+          "hash": "2A24/4EbvI4ow/YYfQ48vE6n4u8IvDZ/6J/yulCJfiE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NeblioTransactionBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NeblioTransactionBuilder.html",
+          "hash": "wmaZCJoiOEajQXeNkVpF/WkpnOSJ2zlOg1eqzMUFNV0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NewTokenTxMetaField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NewTokenTxMetaField.html",
+          "hash": "9pgsSDZvyKWyS5Y0E5ZGXyc+QWmMgbCJ2cGBz/f4KqM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NewTokenTxReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NewTokenTxReceiver.html",
+          "hash": "sYetGhHNbCa1IK2A0FHG9WF1mnsEtRMqX/+Us9DDz+o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.NewTokenTxUtxo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.NewTokenTxUtxo.html",
+          "hash": "5yG6bwj/3GzBXeDJwXLRmLbNhp3kLAxuPhY7dgk8Sb0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.TransactionInputSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.TransactionInputSummary.html",
+          "hash": "J9GDrjk87D+JjYyeq5s25cU8v7Kk8P2Mw2bVssSBXQE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.TransactionOutputSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.TransactionOutputSummary.html",
+          "hash": "CKrKB96KGtgVabVfptwJHNfsiNCbpb40usUaMXmJO4I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Builders.Neblio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Builders.Neblio.html",
+          "hash": "ziSLCBEjj66UgYSOJDXepUj+dksy9yHp80NJFw73fzE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/VEDriversLite.Common.QTRPCConfig.yml",
       "output": {
         ".html": {
@@ -265,6 +397,186 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.CoingeckoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.CoingeckoDto.html",
+          "hash": "+gecmUbqkLnG2DQl04uD5n/Y7I/+5uyKQkRcS43eiWo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.CoingeckoExchangeRatesAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.CoingeckoExchangeRatesAPI.html",
+          "hash": "xT0mJC9qbr9Cymn4WrqJuURT1D1PNMTA1YvlhnE/3YA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.CoingeckoUsdPriceDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.CoingeckoUsdPriceDto.html",
+          "hash": "tzf8GOMuugO7A3zUiEMT2j9pQ8tYHr9Rluy32UmaSKc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.CoingeckoAPI.html",
+          "hash": "w58P/QdOoxGLLsbHy7tz4A2izKJMxttA2PLiUvbnVZo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.CommonExchangeRatesAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.CommonExchangeRatesAPI.html",
+          "hash": "QB/14Ytfol8DI2Mi4YDV0qh6FxD7BGLn6xnyKGxb46k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.CurrencyTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.CurrencyTypes.html",
+          "hash": "HD+Gp/5XkJh72ufAYsmDfEEN3tY85RkTluZLHxS7wp8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.Dto.PriceDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.Dto.PriceDto.html",
+          "hash": "kBxX94zGqjn2jT5V8EzWnl8i5N/8b9LCpHViFQULFEQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.Dto.html",
+          "hash": "QpI5h9q2lgshvWXeYGrdKnHFlmmPUzPhidrWYRD57J4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.ExchangeRatesAPIFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.ExchangeRatesAPIFactory.html",
+          "hash": "5qw+oj0CLhUFopVqu4nJaFKiDHX+/8Lyibosb9HpSWE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.ExchangeRatesAPITypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.ExchangeRatesAPITypes.html",
+          "hash": "xTJCMG8rqRWGJPUsdSRpLA6oFZj+RftppBB4UBfzO9k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.IExchangeRatesAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.IExchangeRatesAPI.html",
+          "hash": "x+g7nYgeGZ3TYJjXMf8pEOTnFPBwqJCg1SNYiatdDu0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.PriceCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.PriceCalculator.html",
+          "hash": "3PLpQp4uCb4Ygpmd0x779wojOQnkcLnkum00fcUzW6s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.PriceService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.PriceService.html",
+          "hash": "eJAMhC/PUgp6nDpTYfUdZ8vmFf2rlosczwfFlR9avdw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.TestExchangeRatesAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.TestExchangeRatesAPI.html",
+          "hash": "Pyal3oOgWukbCfMNHydM9Z+PSLWq92b+pMffx6wnBHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Cryptocurrencies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Cryptocurrencies.html",
+          "hash": "szmZ3W36EMQgBdlV5+5Dc6kwDQ0UQgJXMJ6QeOm81L0="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1177,6 +1489,222 @@
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Billing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Billing.html",
+          "hash": "rSdIGD+xTV5VOcTSuxkJT9tROi433UinSTtuzJWpz7o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Category.html",
+          "hash": "tGumoNnMyJRfHXJ1jUA4nV2kVvfde4q9a15rYvxWpFg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.CategoryOfDownloads.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.CategoryOfDownloads.html",
+          "hash": "bSyyvS43TKMPkqQbLCwt7/h4vdxDzTBbZrjLE2nmvVs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.DownloadsObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.DownloadsObject.html",
+          "hash": "rKyriZOuhkQ76Gff4EA/2/vFsyrgruJuLfSrNsf5/yc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.ImageObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.ImageObject.html",
+          "hash": "Zs0WZnhaKHlsubqRuvkWaF759C0bcIUGOaHnAD1IDEI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.LineItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.LineItem.html",
+          "hash": "F63JsQTdLXq9UqJijLWYn/HfRMGcrgXNm3MqnIflMtE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.NFTOrderToDispatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.NFTOrderToDispatch.html",
+          "hash": "N1jyGwRlThhiaoGXn2L+m0QLyl9BGktfNskWBf7Eis8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Order.html",
+          "hash": "Mde9a15fQnzS16cYRTe2SKS5z6pgop/PFIPhJWwk5k0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.OrderStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.OrderStatus.html",
+          "hash": "yrmFtWmlkZutL+FomySKBhBcXpWAWuYlRGoUB92kikg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Product.html",
+          "hash": "ESyoriOohBg1e1Yv2nwt0fXKgRFulphhPqWLxZTnkuk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.ProductMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.ProductMetadata.html",
+          "hash": "igH3hXXrTiMWmMkG8T1ic4nv65Ohlo1bgltxI55f+uQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.ReceivedPaymentForOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.ReceivedPaymentForOrder.html",
+          "hash": "5viq1f5C4XjX27wd255g/725SZsKJM5k/QsJtOkKOxs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Shipping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.Shipping.html",
+          "hash": "ZhhTbsQbBhXuZBaRC8S2yBBnLGZVDd4DSm2wDRwCtJo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.StockStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.StockStatus.html",
+          "hash": "tefohW5w/N5KkguEe5yx+/Gwened0ofz2CAFU9VQHQ0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.Dto.html",
+          "hash": "HezXKZWjxgWSTvStnMXyDLWGX1yEy5xPDH3dN71tm+8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.WooCommerceHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.WooCommerceHelpers.html",
+          "hash": "hHHWPWcBvy6ZFkEhdvWha6fkZCU5StggZZ5EYxvG4f8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.WooCommerceShop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.WooCommerceShop.html",
+          "hash": "QzWor2Kuxh6BJPgva9aG6H3kwTUyVvJcnwUyQKr3cqM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VEDriversLite.Extensions.WooCommerce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VEDriversLite.Extensions.WooCommerce.html",
+          "hash": "wEpMqL8bQt6eGmPB6YoIwfpeHmhoYm41myf42Ji/iUw="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3561,7 +4089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "1qbvK9eDRD9Ha4xAnMgmKK4nN3kUPpMkfaz5tvUgXfI="
+          "hash": "AczwoXJzlzhqIieGtj+v/4NZkRnK5rrUR1OvaT/ZwWU="
         }
       },
       "is_incremental": false,
@@ -3634,8 +4162,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 295,
-          "skipped_file_count": 246
+          "total_file_count": 339,
+          "skipped_file_count": 286
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

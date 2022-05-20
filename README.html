@@ -89,502 +89,110 @@
                     <article class="content wrap" id="_content" data-uid="">
 <h1 id="vedriverslite">VEDriversLite</h1>
 
-<p>VEBlazor is the UI component library for .NET Blazor framework.</p>
-<p>It uses the <a href="https://www.nuget.org/packages/VEFramework.VEDriversLite/">VEDriversLite library</a> for the most &quot;backend&quot; work. It is kind of the demo how you can wrap the VEDriversLite into UI components.</p>
-<p>The library is now as &quot;preview&quot;. We are still working hard on the refactoring. Same as this readme.</p>
-<p>The library is based on the <a href="https://blazorise.com/">great component library Blazorise</a>. Thanks to <a href="https://github.com/stsrki">Mladen Macanovic</a> for help with first steps with Blazorise library :)</p>
-<h1 id="live-demo">Live Demo</h1>
-<p>Url with live demo will be provided soon.</p>
-<p>If you would like to participate on development and testing please <a href="mailto:tomas.svoboda@technicinsider.com">contact us here</a>.</p>
-<h1 id="compatibility">Compatibility</h1>
-<ul>
-<li>.NET 6.0</li>
-</ul>
-<h1 id="first-steps">First steps</h1>
-<ul>
-<li>Create Empty Blazor Project (can be Server or WebAssembly)</li>
-<li>Add VEBlazor project reference or nuget package</li>
-<li>Add necessary css and js dependencies in MyApp/wwwroot/index.html</li>
-</ul>
-<p>Here is the Example:</p>
-<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
-    &lt;title&gt;VEBlazor.Demo.EventsAndTickets&lt;/title&gt;
-    &lt;base href=&quot;/&quot; /&gt;
-    &lt;link href=&quot;css/bootstrap/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-
-    &lt;link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'&gt;
-
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css&quot; integrity=&quot;sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn&quot; crossorigin=&quot;anonymous&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.15.4/css/all.css&quot;&gt;
-
-    &lt;link href=&quot;_content/Blazorise/blazorise.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;_content/Blazorise.Bootstrap/blazorise.bootstrap.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;_content/Blazorise.Snackbar/blazorise.snackbar.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;https://unpkg.com/easymde/dist/easymde.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-
-    &lt;link href=&quot;VEBlazor.Demo.EventsAndTickets.styles.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;link href=&quot;css/app.css&quot; rel=&quot;stylesheet&quot; /&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-    &lt;div id=&quot;app&quot;&gt;
-        &lt;div style=&quot;position:absolute; top:30vh; width:100%; text-align:center&quot;&gt;
-            &lt;img src=&quot;images/main-bw-big.png&quot; style=&quot;max-height:250px; max-width: 250px;&quot; /&gt;
-            &lt;p&gt;&lt;/p&gt;
-            &lt;hr /&gt;
-            &lt;p&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;i class=&quot;oi oi-reload&quot;&gt;&lt;/i&gt; The MyApp Web App is loading...&lt;/p&gt;
-            &lt;p&gt;First load of the App can take a while. Next time the load will be much faster.&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src=&quot;_content/VEBlazor/jquery.slim.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/VEBlazor/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/VEBlazor/popper.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/VEBlazor/easymde.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/VEBlazor/highlight.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/BlazorPanzoom/panzoom.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/BlazorPanzoom/blazorpanzoom.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/Texnomic.Blazor.JsonViewer/scripts/JsonViewer.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;_content/VEBlazor/veblazor.js&quot;&gt;&lt;/script&gt;
-
-    &lt;div id=&quot;blazor-error-ui&quot;&gt;
-        An unhandled error has occurred.
-        &lt;a href=&quot;&quot; class=&quot;reload&quot;&gt;Reload&lt;/a&gt;
-        &lt;a class=&quot;dismiss&quot;&gt;🗙&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;_framework/blazor.webassembly.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-
+<p>Virtual Economy framework will help you to create applications related to Web3, Blockchains, IoT, NFTs, Cryptocurrencies and other useful technologies.</p>
+<p>This project is OpenSource for personal, educational and commercial use also.</p>
+<p>Main framework is .NET Core 3.1 (VEDriversLite). You can use it now with .NET 6.0 Blazor WebAssembly application  Code is written in C#, HTML, CSS and JavaScript. Solution is for Visual Studio 2022.</p>
+<p>Repository now contains new version of drivers for Neblio and Doge: VEDriversLite. It is also available as Nuget package. Please check this drivers and documentation.</p>
+<p>We recommend to use VEDriversLite if you need to build app which uses just Neblio or Doge!</p>
+<h1 id="hello-world-with-vedriverslite">Hello World with VEDriversLite</h1>
+<p><a href="https://dotnet.microsoft.com/en-us/download/dotnet/3.1">Install the .NET Core 3.1 SDK.</a></p>
+<p>Create project
+Open console line and create empty folder and ConsoleApplication project</p>
+<pre><code>mkdir CreateAccountExample
+cd CreateAccountExample
+dotnet new console
+dotnet add package VEFramework.VEDriversLite
 </code></pre>
+<h1 id="project-and-code-documentation">Project and Code Documentation</h1>
+<h1 id="first-steps">First Steps</h1>
+<p><a href="https://veframework.com/first-steps/">First Steps with VEDrivers Lite</a></p>
+<h1 id="project-wiki">Project Wiki</h1>
+<p><a href="https://github.com/fyziktom/VirtualEconomyFramework/wiki/Getting-Started-With-VEDriversLite">Wiki</a></p>
+<h1 id="vedriverslite-docfx-documentation">VEDriversLite Docfx documentation</h1>
+<p><a href="https://fyziktom.github.io/VirtualEconomyFramework/api/index.html">VEDriversLite Documentation</a></p>
+<h1 id="supported-platforms">Supported Platforms</h1>
+<p>Project is based on .NET Core 5.0 so it can run on:</p>
 <ul>
-<li>Add default images in the folder MyApp/wwwroot/images</li>
+<li>Windows</li>
+<li>Windows 10 IoT</li>
+<li>Linux</li>
+<li>MacOS</li>
+<li>iOS</li>
+<li>Android</li>
+<li>x86, x64, AnyCPU, ARM And other platforms which .NET Core supports.</li>
 </ul>
-<p>There are three main images and you can override them with your logos:</p>
+<h1 id="projects-in-the-solution">Projects in the solution</h1>
 <ul>
-<li>main-bw-small.png</li>
-<li>main-bw-big.png</li>
-<li>main-bw-long.png</li>
+<li>VEDriversLite - Light version and Actual Recommended! version of Neblio drivers, includes NFT drivers</li>
+<li>TestVEDriversLite - testing utility wih integration tests/examples for VEDriversLite</li>
+<li>VEFrameworkUnitTest - Unit tests project.</li>
+<li>VENFTApp-Blazor - Example of use of VEDriversLite in Blazor WebAssembly App. Contains lots of Blazor components!!!</li>
+<li>VENFTApp-Server - Example of use of VEDriversLite in Blazor Server App. It offers API for lots of VEDriversLite commands.</li>
+<li>VEOnePage - Example of the simple webpage which works as presentation page for some address NFTs. Example was created for Coruzant.com</li>
+<li>VECryptographyUtilities - encrypt and decrypt keys example</li>
 </ul>
-<p>Please check the demos for the details.</p>
+<h1 id="main-features">Main Features</h1>
 <ul>
-<li>Add the references to the _Imports.razor:</li>
+<li>Create Blockchain Account and send transactions or NFTs with just few lines of the code</li>
+<li>VEFramework works with multiple blockchains. Now it has support of Neblio and Dogecoin</li>
+<li>Blazor Webassebmly example VE NFT App</li>
+<li>Server App with prepared API for integration existing app or UI with Web3 environments</li>
+<li>Set of drivers/helpers for minting, sell and trade NFTs. Already with Images, Post, Music, Profile, Payment, etc. NFTs.</li>
+<li>Integration of IPFS API which uses Infura.io as IPFS node</li>
+<li>Create blockchain application without need of running own node</li>
+<li>NFT Ownership verification system with creating QR codes/messages</li>
+<li>NFT Events and Tickets system.</li>
+<li>System of P2P NFT encrypted metadata and encrypted filecontainers stored on ipfs</li>
+<li>Encryption with EDCH shared secret algorithm. Dont need to share password between peers, they will calculate it!</li>
+<li>RPC Client for connection the blockchain node</li>
+<li>Neblio Blockchain API wrapper and helper classes</li>
+<li>Drivers for special transactions such as split transactions, multiple token input/output, minting multiple NFTs, etc.</li>
+<li>Dogecoin API wrapper and helper classes.</li>
 </ul>
-<pre><code class="lang-csharp">@using System.Net.Http
-@using System.Net.Http.Json
-@using Microsoft.AspNetCore.Components.Forms
-@using Microsoft.AspNetCore.Components.Routing
-@using Microsoft.AspNetCore.Components.Web
-@using Microsoft.AspNetCore.Components.Web.Virtualization
-@using Microsoft.AspNetCore.Components.WebAssembly.Http
-@using Microsoft.JSInterop
-@using VEBlazor.Demo.EventsAndTickets
-@using VEBlazor
-@using VEBlazor.Pages
-@using VEBlazor.Layouts
-@using VEBlazor.Menu
-@using Blazorise
-</code></pre>
+<p>Other features you can explore in the readme of the specifics projects in the solution.</p>
+<h1 id="contributors-and-development-partners">Contributors and Development Partners</h1>
+<p>Tomas Svoboda - <a href="https://twitter.com/fyziktom">Twitter</a></p>
+<p>RoundSqr - <a href="https://www.roundsqr.com/">Company website</a></p>
+<p>Löwenware - <a href="https://lowenware.com/">Company website</a></p>
+<p>PureCrew - <a href="https://purecrew.cz/">Company website</a></p>
+<p>Francis Karuri - LinkedIn</p>
+<p>We are looking for new contributors. Please feel free to contact me on tomas.svoboda@technicinsider.com</p>
+<p>#Thanks</p>
+<p>Main Thanks goes to Mr. Jan Kuznik. He taught me lots of great knowledge about programming.</p>
+<p>“TestNeblio.exe” utility is Mr.Kuznik design and he agreed to publish it with this project. Many thanks for this great tool.</p>
+<p>Many thanks for Blazor developers. It is absolutelly amazing tool!</p>
+<p>This project uses some other opensource libraries or other tools. Many thanks to all authors of these projects and other opensource projects.</p>
 <ul>
-<li>Add services to Program.cs:</li>
+<li>Neblio – Blockchain solution for Enterprises – <a href="https://github.com/NeblioTeam/neblio">https://github.com/NeblioTeam/neblio</a></li>
+<li>Microsoft - .NET Core, C#, Entity Framework Core - <a href="https://docs.microsoft.com/en-us/dotnet/core/introduction">https://docs.microsoft.com/en-us/dotnet/core/introduction</a></li>
+<li>Blazor - Web Apps with C# - <a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor">https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor</a></li>
+<li>Newtonsoft.Json – JSON parsing library - <a href="https://github.com/JamesNK/Newtonsoft.Json">https://github.com/JamesNK/Newtonsoft.Json</a></li>
+<li>NBitcoin - .NET C# Library for Bitcoin based cryptocurrencies - <a href="https://github.com/MetacoSA/NBitcoin">https://github.com/MetacoSA/NBitcoin</a></li>
+<li>Ant Desing Blazor - Blazor component library - <a href="https://antblazor.com/en-US/">https://antblazor.com/en-US/</a></li>
+<li>BlazorFileReader - File Reader component for Blazor - <a href="https://github.com/Tewr/BlazorFileReader">https://github.com/Tewr/BlazorFileReader</a></li>
+<li>IPFS Http Client C# - Http Api wrapper for IPFS - <a href="https://github.com/richardschneider/net-ipfs-http-client">https://github.com/richardschneider/net-ipfs-http-client</a></li>
+<li>DocFx – API documentation generator - <a href="https://github.com/dotnet/docfx">https://github.com/dotnet/docfx</a></li>
+<li>Swagger – OpenAPI description of REST API - <a href="https://swagger.io/">https://swagger.io/</a></li>
+<li>MQTTNet – library for MQTT connection - <a href="https://github.com/chkr1011/MQTTnet">https://github.com/chkr1011/MQTTnet</a></li>
+<li>Log4net – library for logging - <a href="https://github.com/apache/logging-log4net">https://github.com/apache/logging-log4net</a></li>
+<li>Binance.Net – library for connecting to Binance Exchange - <a href="https://github.com/JKorf/Binance.Net">https://github.com/JKorf/Binance.Net</a></li>
+<li>Jint – library for run JavaScript in C# - <a href="https://github.com/sebastienros/jint">https://github.com/sebastienros/jint</a></li>
+<li>Npgsql – EFC provider for PostgreSQL - <a href="https://github.com/npgsql/efcore.pg">https://github.com/npgsql/efcore.pg</a></li>
+<li>Node.js – JavaScript runtime - <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+<li>Node-RED – IoT tool for event driven connections -</li>
+<li>Aedes Node-Red node – MQTT Broker - <a href="https://github.com/moscajs/aedes">https://github.com/moscajs/aedes</a></li>
+<li>Paho MQTT – JavaScript library for MQTT client - <a href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></li>
+<li>Chart JS - JavaScript library for charts - <a href="https://github.com/chartjs">https://github.com/chartjs</a></li>
+<li>CodeJar - Simple JavaScript editor - <a href="https://github.com/antonmedv/codejar">https://github.com/antonmedv/codejar</a></li>
+<li>Prism - Code Syntax Highlight library - <a href="https://prismjs.com/">https://prismjs.com/</a></li>
+<li>Crypto JS - JS library of crypto standards - <a href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a></li>
+<li>Chessboard JS - JS library for chess game - <a href="https://chessboardjs.com/">https://chessboardjs.com/</a></li>
+<li>Bootstrap Studio – tool for simplify web-based UI - <a href="https://bootstrapstudio.io/">https://bootstrapstudio.io/</a></li>
 </ul>
-<pre><code class="lang-csharp">using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using VEBlazor.Demo.EventsAndTickets;
-using Blazorise;
-using Blazorise.Bootstrap;
-using Blazorise.Icons.FontAwesome;
-using Blazored.LocalStorage;
-using BlazorPanzoom;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add&lt;App&gt;(&quot;#app&quot;);
-builder.RootComponents.Add&lt;HeadOutlet&gt;(&quot;head::after&quot;);
-
-builder.Services.AddScoped(sp =&gt; new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-builder.Services
-    .AddBlazorise(options =&gt;
-    {
-        options.Immediate = true;
-    })
-    .AddBootstrapProviders()
-    .AddFontAwesomeIcons();
-
-builder.Services.AddScoped&lt;AppData&gt;();
-builder.Services.AddScoped&lt;TransactionsService&gt;();
-builder.Services.AddBlazoredLocalStorage();
-builder.Services.AddBlazorPanzoomServices();
-
-await builder.Build().RunAsync();
-
-</code></pre>
-<ul>
-<li>Add template setting into the App.razor:</li>
-</ul>
-<pre><code class="lang-csharp">@using VEDriversLite.NFT
-@using VEDriversLite.NFT.Dto
-@inject AppData AppData
-
-&lt;Blazorise.ThemeProvider Theme=&quot;@theme&quot;&gt;
-    &lt;Router AppAssembly=&quot;@typeof(App).Assembly&quot;&gt;
-        &lt;Found Context=&quot;routeData&quot;&gt;
-            &lt;RouteView RouteData=&quot;@routeData&quot; DefaultLayout=&quot;@typeof(MainLayout)&quot; /&gt;
-            &lt;FocusOnNavigate RouteData=&quot;@routeData&quot; Selector=&quot;h1&quot; /&gt;
-        &lt;/Found&gt;
-        &lt;NotFound&gt;
-            &lt;PageTitle&gt;Not found&lt;/PageTitle&gt;
-            &lt;LayoutView Layout=&quot;@typeof(MainLayout)&quot;&gt;
-                &lt;p role=&quot;alert&quot;&gt;Sorry, there's nothing at this address.&lt;/p&gt;
-            &lt;/LayoutView&gt;
-        &lt;/NotFound&gt;
-    &lt;/Router&gt;
-
-    &lt;VEBlazor.Components.VEBlazorServicesComponents /&gt;
-&lt;/Blazorise.ThemeProvider&gt;
-
-@code {
-    // Main app theme. You can load own theme. It includes colors, etc.
-    Theme theme = VEBlazor.Models.Themes.DefaultTheme.GetDefaultTheme();
-
-    protected override async Task OnInitializedAsync()
-    {
-        // Longer name of the App
-        AppData.AppName = &quot;Dogeft&quot;;
-        // Nick of the App. Displayed in breadcrumbs, etc.
-        AppData.AppNick = &quot;DOGEFT&quot;;
-        // main app website with help, info about project, etc.
-        // This is link in menu &quot;About&quot; under the login item
-        AppData.AppHomeWebsiteUrl = &quot;https://dogeft.com/&quot;;
-        // App url for sharing NFTs
-        AppData.AppShareNFTUrl = &quot;https://dogeft.ve-nft.com/&quot;;
-        // Allow Work tabs with NFT image editor
-        AppData.AllowWorkTabs = false;
-        // Allow sending of NFT in your app
-        AppData.AllowSend = true;
-        // Allow Destroy (or recycle is better for this) of NFT
-        AppData.AllowDestroy = true;
-        // If you use the Markdown getting started page set this
-        AppData.DisplayGettingStartedMenuItem = true;
-        // If you use the Markdown getting started page define location
-        AppData.GettingStartedPageName = &quot;gettingstarted&quot;;
-        // Define ID of your Token. 
-        // You can use some defaults or create own on Neblio blockchain
-        AppData.AppTokenId = NFTHelpers.BDPTokenId;
-
-        // Define minting tabs
-        // Each of them must have also page added in Pages Foler
-        if ( AppData.MintingTabsData.TryGetValue( &quot;default&quot;, out var tab ) )
-        {
-            tab.MintingNFTType = NFTTypes.Ticket;
-            tab.HeaderLabel = &quot;Add New Ticket&quot;;
-            tab.MenuButonLabel = &quot;New Ticket&quot;;
-            tab.TabPageLocationName = &quot;addnew&quot;;
-            tab.NFT = new TicketNFT( &quot;&quot; );
-        }
-        AppData.MintingTabsData.TryAdd( &quot;eventminting&quot;, new MintingTabData()
-            {
-                MintingNFTType = NFTTypes.Event,
-                HeaderLabel = &quot;Add New Event&quot;,
-                MenuButonLabel = &quot;New Event&quot;,
-                TabPageLocationName = &quot;addnewevent&quot;,
-                NFT = new EventNFT( &quot;&quot; ),
-            } );
-        AppData.MintingTabsData.TryAdd( &quot;postminting&quot;, new MintingTabData()
-            {
-                MintingNFTType = NFTTypes.Post,
-                HeaderLabel = &quot;Add New Post&quot;,
-                MenuButonLabel = &quot;New Post&quot;,
-                TabPageLocationName = &quot;addnewpost&quot;,
-                NFT = new PostNFT( &quot;&quot; ),
-            } );
-
-        // you can allow just specific types of the NFTs to display
-        AppData.AllowedNFTTypes = new List&lt;NFTTypes&gt;()
-        {
-            VEDriversLite.NFT.NFTTypes.Profile,
-            VEDriversLite.NFT.NFTTypes.Image,
-            VEDriversLite.NFT.NFTTypes.Post,
-            VEDriversLite.NFT.NFTTypes.Event,
-            VEDriversLite.NFT.NFTTypes.Ticket
-        };
-
-        // Define custom tags which will be displayed as Fast option
-        AppData.DefaultTags.Add(&quot;MyAppTag&quot;, new VEDriversLite.NFT.Tags.Tag()
-        {
-            Name = &quot;MyAppTag&quot;,
-            Color = &quot;success&quot;,
-            UseAsFastButton = true
-        });
-        AppData.DefaultTags.Add(&quot;MySecondTag&quot;, new VEDriversLite.NFT.Tags.Tag()
-        {
-            Name = &quot;MySecondTag&quot;,
-            Color = &quot;secondary&quot;,
-            UseAsFastButton = true
-        });
-    }
-}
-</code></pre>
-<ul>
-<li>Add Pages</li>
-</ul>
-<p>If you use the basic layout you should add at least pages:</p>
-<ul>
-<li>My Account</li>
-<li>Gallery</li>
-<li>Add New</li>
-</ul>
-<p>Example of gallery page with default template:</p>
-<pre><code class="lang-csharp">@inject AppData AppData
-@page &quot;/gallery&quot;
-
-@*Add Default Title and Header*@
-&lt;PageTitle&gt;@AppData.AppName - Gallery&lt;/PageTitle&gt;
-&lt;VEBlazor.Components.PageHeader Title=&quot;Tickets Gallery&quot; BreadcrumbItems=&quot;@(new string[] { AppData.AppName, &quot;Gallery&quot; })&quot; /&gt;
-
-@*Add Default Theme*@
-&lt;VEBlazor.Pages.Gallery @ref=&quot;galleryComponent&quot; /&gt;
-
-@code {
-    VEBlazor.Pages.Gallery? galleryComponent;
-
-    // Load the parameters from URL
-    [Parameter]
-    [SupplyParameterFromQuery( Name = &quot;utxo&quot; )]
-    public string[]? InUtxos { get; set; }
-    // Load the parameters from URL
-    [Parameter]
-    [SupplyParameterFromQuery( Name = &quot;addr&quot; )]
-    public string[]? InAddresses { get; set; }
-
-    protected override async Task OnAfterRenderAsync( bool firstRender )
-    {
-        await base.OnAfterRenderAsync( firstRender );
-        // Load the parameters from URL
-        if ( galleryComponent == null )
-            return;
-        if ( InUtxos != null &amp;&amp; InUtxos.Length &gt; 0 )
-            await galleryComponent.OpenInUtxoInTab( InUtxos );
-        if ( InAddresses != null &amp;&amp; InAddresses.Length &gt; 0 )
-            await galleryComponent.OpenInAddressesInTab( InAddresses );
-    }
-}
-</code></pre>
-<p>Other pages demo you can find in the Demo projects.</p>
-<h1 id="demos">Demos</h1>
-<p>We have created multiple demos. Please search these projects:</p>
-<ul>
-<li>BDP-WASM</li>
-<li>VEBlazor.Demos.EventsAndTickets</li>
-<li>VEBlazor.Demos.VENFTApp.Client</li>
-</ul>
-<h1 id="main-components">Main Components</h1>
-<p>Most of the components inherits from the NFTComponentBase or similar base classes in this file.</p>
-<h2 id="services">Services</h2>
-<ul>
-<li>App Data</li>
-<li>Transaction Service</li>
-</ul>
-<h2 id="layout-related">Layout Related</h2>
-<h3 id="layout">Layout</h3>
-<ul>
-<li>Main Layout</li>
-</ul>
-<h3 id="models---themes">Models - Themes</h3>
-<p>In the Themes you can define your own color scheme. We have one default scheme. Soon we will add Dark mode, etc.</p>
-<ul>
-<li>Default Theme</li>
-</ul>
-<h3 id="pages">Pages</h3>
-<p>All of these pages templates must be placed as component in page in the MyApp/Pages folder. As it was showed upper in &quot;First Steps&quot; on example Gallery page.</p>
-<ul>
-<li>My Account</li>
-<li>Gallery</li>
-<li>Add New</li>
-<li>BuyNFT</li>
-<li>Readme</li>
-</ul>
-<p>Readme page loads the Readme.md file placed in the MyApp/wwwroot/</p>
-<h3 id="menu">Menu</h3>
-<p>Main Layout automatically switches the menus from the Side (on Tablet and biggers) to Top Menu (on phones).</p>
-<ul>
-<li>Side Menu</li>
-<li>Top Menu</li>
-</ul>
-<h3 id="tabs">Tabs</h3>
-<ul>
-<li>Gallery Tab Content</li>
-<li>Work Tab Content</li>
-</ul>
-<h2 id="account">Account</h2>
-<ul>
-<li>Account Balance</li>
-<li>Accont Sider</li>
-<li>Create Account</li>
-<li>Import Account</li>
-<li>Unlock Account</li>
-<li>Neblio Address Input</li>
-</ul>
-<p>Neblio Address Input loads bookmarks and allow to use already saved address. It load part of the Unstoppable Domains. We will need to do some updates in API, but part of the addresses works fine. You will type UD name and it will change it to the Neblio Address.</p>
-<h2 id="transaction">Transaction</h2>
-<ul>
-<li>Transaction List</li>
-<li>Transaction Details</li>
-<li>SendNeblioTransaction</li>
-</ul>
-<p>Send Neblio Transaction component offers multiple different transactions:</p>
-<ul>
-<li>Classic Neblio or Token transactions - send to some address coins or tokens
-<ul>
-<li>Example: 10 NEBL or 100 VENFT tokens, etc.</li>
-</ul>
-</li>
-<li>Split Neblio or Token transaction - send to yourself or some address coins or tokens changed in smaller multiple lots
-<ul>
-<li>Example: 10 x 1 NEBL or 5 x 20 VENFT tokens, etc.</li>
-</ul>
-</li>
-<li>Airdrop transaction
-<ul>
-<li>Example: 1 NEBL and 100 VENFT tokens in one transaction</li>
-</ul>
-</li>
-</ul>
-<h2 id="bookmarks">Bookmarks</h2>
-<ul>
-<li>Bookmark Icon</li>
-<li>Bookmark Item</li>
-<li>Bookmark Manager List</li>
-</ul>
-<h2 id="display">Display</h2>
-<ul>
-<li>Copy Button</li>
-<li>Copy Icon</li>
-<li>Labeled Progress Bookmark</li>
-<li>PanzoomImage</li>
-</ul>
-<h2 id="nfts">NFTs</h2>
-<h3 id="data-upload">Data Upload</h3>
-<ul>
-<li>Upload Data</li>
-<li>File Upload</li>
-<li>IPFS Upload</li>
-</ul>
-<p>Upload of the data allows to upload single or multiple files. You can setup this option in UploadData component.</p>
-<p>UploadData component is the main which contains two steps: FileUpload (to the browser environment) and then IPFSUpload which upload file to the IPFS node and return the IPFS Hash of the file.</p>
-<p>The UploadData component display the preview of the files, allow to remove them and allow to select which one will be the main.</p>
-<p>You can upload different files now:</p>
-<ul>
-<li>Images: *.bmp, *.png, *.jpg/jpeg, *.gif, *.jfif</li>
-<li>AVMedia: *.mp3, *.wav, *.ogg, *.mp4, *.avi, *.mpeg, *.mov</li>
-<li>JSON: *.json</li>
-<li>HTML: *.html</li>
-<li>PDF: *.pdf</li>
-</ul>
-<h3 id="minting">Minting</h3>
-<p>Minting forms contains lots of usefull components for the input.</p>
-<p>For example Tags input with Autocomplete, Markdown editor, etc.
-Most of these components are wrapped components from the <a href="https://blazorise.com">Blazorise library</a>.
-I recommend to browse all <a href="https://bootstrapdemo.blazorise.com/">Blazorise components in their demo here</a> to check all possibilities.</p>
-<ul>
-<li>Data Info from</li>
-<li>Fast Number Input</li>
-<li>Load And Display NFT</li>
-<li>Load NFT From Template</li>
-<li>Minting Toolbar</li>
-<li>Toolbar Button</li>
-<li>Multimint Form</li>
-<li>Precise Slider</li>
-<li>Space Tags</li>
-</ul>
-<h3 id="nft-actions">NFT Actions</h3>
-<p>NFT Actions are used in the NFT Details. You can use them separately on any page.
-It takes the NFT refference and then send it and inform with EventCallback about sent.</p>
-<ul>
-<li>NFT Action Control</li>
-<li>Destroy NFT</li>
-<li>Save NFT</li>
-<li>Send NFT</li>
-<li>Set NFT Price</li>
-<li>Share NFT</li>
-<li>Storage Info and Actions</li>
-</ul>
-<h3 id="nft-display">NFT Display</h3>
-<h4 id="common">Common</h4>
-<p>The NFT Details can be injected with your specific NFT Details Form. Check the OpenNFTDetailsFactory as example how to build some simple logic to feed the NFT Details with own specific form.</p>
-<ul>
-<li>NFT Basic Info</li>
-<li>NFT Card</li>
-<li>NFT Data Item</li>
-<li>NFT Details</li>
-<li>NFT Text</li>
-<li>Open NFT Details Factory</li>
-</ul>
-<h4 id="lists">Lists</h4>
-<ul>
-<li>NFT Card List</li>
-<li>NFT Payment List</li>
-<li>NFT Receipts List</li>
-</ul>
-<h4 id="verification">Verification</h4>
-<ul>
-<li><p>This code is unique for 60 seconds. It is refreshed after this time with new digital signature.</p>
-</li>
-<li><p>Ownership QR Code</p>
-</li>
-</ul>
-<h4 id="events-and-tickets">Events And Tickets</h4>
-<ul>
-<li>Event Details</li>
-<li>Event Specific Minting Form</li>
-<li>Ticket Details</li>
-<li>Ticket Specific Minting Form</li>
-<li>Use Ticket</li>
-</ul>
-<h4 id="imaging---x-ray">Imaging - X-Ray</h4>
-<ul>
-<li>X-Ray Image Exposure Params Form</li>
-<li>X-Ray Params Values</li>
-<li>X-Ray Image Details</li>
-<li>X-Ray Image Editor Toolbar</li>
-<li>X-Ray Image Editor</li>
-</ul>
-<h4 id="payments">Payments</h4>
-<ul>
-<li>NFT Payment Details</li>
-<li>NFT Receipt Details</li>
-</ul>
-<h4 id="profile">Profile</h4>
-<p>Profile in the MyAccount is NFT also. These components display it and allows to create/edit it.</p>
-<ul>
-<li>Account Profile NFT</li>
-<li>Edit Profile NFT</li>
-</ul>
-<h3 id="tags">Tags</h3>
-<p>Tags displayed on the NFT Card and in NFT Details Basic Info</p>
-<ul>
-<li>Tags</li>
-</ul>
-<h4 id="blockchains">Blockchains</h4>
-<ul>
-<li>Neblio Tags</li>
-<li>Dogecoin Tags</li>
-<li>Dogepalooza Tags</li>
-</ul>
-<h4 id="nfts-1">NFTs</h4>
-<ul>
-<li>NFT Card Badge</li>
-</ul>
+<h1 id="license">License</h1>
+<p>This framework can be used for any use even for commercial use. License is BSD 2 with additional conditions.</p>
+<p>Please read it here:</p>
+<p><a href="https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt">https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt</a></p>
 </article>
               
                 </div>

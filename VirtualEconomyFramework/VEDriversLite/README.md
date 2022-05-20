@@ -24,6 +24,54 @@ dotnet new console
 dotnet add package VEFramework.VEDriversLite
 ```
 
+Write simple code to mint NFT
+Please remember that when you create address you need to load the Neblio and tokens to the address! It is good practice to create VENFT Web wallet for the testing and development. You can request the Airdrop or you can send the Neblio from exchange, Orion wallet or staking desktop wallet.
+
+```
+using System;
+using VEDriversLite;
+
+namespace CreateAccountExample
+{
+    internal class Program
+    {
+        static async System.Threading.Tasks.Task Main(string[] args)
+        {
+            Console.WriteLine(" Hello World With VEDriversLite!");
+            var account = new NeblioAccount(); // create NeblioAccount object
+            await account.CreateNewAccount("mypassword"); // create new account
+            Console.WriteLine($" New Neblio Address: {account.Address}");
+            Console.WriteLine(" Please load Neblio and tokens to Address and then continue.");
+            Console.ReadLine(); // wait for enough confirmation on blockhain
+            // create NFT Image object and load simple test data
+            var nft = new VEDriversLite.NFT.ImageNFT("")
+            {
+                Name = "My Hello World NFT",
+                Description = "Hello World NFT for testing.",
+                ImageLink = "https://MyNFT.image"
+            };
+            var res = await account.MintNFT(nft); // mint NFT with account
+            // process result
+            if (res.Item1)
+                Console.WriteLine($" Minted with Transaction hash: {res.Item2}");
+            else
+                Console.WriteLine($" Cannot mint NFT: {res.Item2}");
+        }
+    }
+}
+
+```
+Then you can run the code
+
+```
+dotnet restore
+dotnet run
+
+```
+You will see output from this program:
+
+Here you can see the details of the transaction in the [Neblio Blockchain Explorer.](https://explorer.nebl.io/tx/e28dcb54c5ec1d3e889a19c75d58eea5e684db6968fd2478a98e78415996760c)
+
 # Project and Code Documentation
 # First Steps
 

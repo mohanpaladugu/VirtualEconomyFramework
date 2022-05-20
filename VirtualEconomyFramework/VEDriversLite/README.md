@@ -10,6 +10,18 @@ Repository now contains new version of drivers for Neblio and Doge: VEDriversLit
 
 We recommend to use VEDriversLite if you need to build app which uses just Neblio or Doge!
 
+## VEFramework components
+
+The VEFramework offers lots of different libraries, drivers, components which will reduce code in your application a lot.
+
+![VEFramewoents](https://ipfs.infura.io/ipfs/QmNrjnNjk7dQKikCo8qZjsKK5J9bw7m8BrJuFXojhwBFJA)
+
+## Development with VEFramework
+
+The most compatible languages are C#, VisualBasic or F#. For lots of applications you can use also different languages and connect backend with use of API or MQTT. This allows to use this framework with more languages such as JavaScript, HTML, Python and others.
+
+![Development with VEFramework](https://ipfs.infura.io/ipfs/QmVYGi34Qpt69GMDjLLoAQtF48GUs6yN5uabE9nPkw3GLX)
+
 # Hello World with VEDriversLite
 
 [Install the .NET Core 3.1 SDK.](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)

@@ -4,6 +4,18 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "E03+q1SNNjC9sgbkuAetq5YbqAG1trxMCWVe8VXHS2Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/VEDriversLite.AccountHandler.yml",
       "output": {
@@ -4156,8 +4168,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
+          "total_file_count": 4,
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

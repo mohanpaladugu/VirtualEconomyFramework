@@ -103,6 +103,48 @@ cd CreateAccountExample
 dotnet new console
 dotnet add package VEFramework.VEDriversLite
 </code></pre>
+<p>Write simple code to mint NFT
+Please remember that when you create address you need to load the Neblio and tokens to the address! It is good practice to create VENFT Web wallet for the testing and development. You can request the Airdrop or you can send the Neblio from exchange, Orion wallet or staking desktop wallet.</p>
+<pre><code>using System;
+using VEDriversLite;
+
+namespace CreateAccountExample
+{
+    internal class Program
+    {
+        static async System.Threading.Tasks.Task Main(string[] args)
+        {
+            Console.WriteLine(&quot; Hello World With VEDriversLite!&quot;);
+            var account = new NeblioAccount(); // create NeblioAccount object
+            await account.CreateNewAccount(&quot;mypassword&quot;); // create new account
+            Console.WriteLine($&quot; New Neblio Address: {account.Address}&quot;);
+            Console.WriteLine(&quot; Please load Neblio and tokens to Address and then continue.&quot;);
+            Console.ReadLine(); // wait for enough confirmation on blockhain
+            // create NFT Image object and load simple test data
+            var nft = new VEDriversLite.NFT.ImageNFT(&quot;&quot;)
+            {
+                Name = &quot;My Hello World NFT&quot;,
+                Description = &quot;Hello World NFT for testing.&quot;,
+                ImageLink = &quot;https://MyNFT.image&quot;
+            };
+            var res = await account.MintNFT(nft); // mint NFT with account
+            // process result
+            if (res.Item1)
+                Console.WriteLine($&quot; Minted with Transaction hash: {res.Item2}&quot;);
+            else
+                Console.WriteLine($&quot; Cannot mint NFT: {res.Item2}&quot;);
+        }
+    }
+}
+
+</code></pre>
+<p>Then you can run the code</p>
+<pre><code>dotnet restore
+dotnet run
+
+</code></pre>
+<p>You will see output from this program:</p>
+<p>Here you can see the details of the transaction in the <a href="https://explorer.nebl.io/tx/e28dcb54c5ec1d3e889a19c75d58eea5e684db6968fd2478a98e78415996760c">Neblio Blockchain Explorer.</a></p>
 <h1 id="project-and-code-documentation">Project and Code Documentation</h1>
 <h1 id="first-steps">First Steps</h1>
 <p><a href="https://veframework.com/first-steps/">First Steps with VEDrivers Lite</a></p>

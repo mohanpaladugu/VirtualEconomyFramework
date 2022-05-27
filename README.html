@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>VEDriversLite </title>
+    <title>About The Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="VEDriversLite ">
+    <meta name="title" content="About The Project ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -87,160 +87,50 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="">
-<h1 id="vedriverslite">VEDriversLite</h1>
+<h2 id="about-the-project">About The Project</h2>
 
-<p>Virtual Economy framework will help you to create applications related to Web3, Blockchains, IoT, NFTs, Cryptocurrencies and other useful technologies.</p>
-<p>This project is OpenSource for personal, educational and commercial use also.</p>
-<p>Main framework is .NET Core 3.1 (VEDriversLite). You can use it now with .NET 6.0 Blazor WebAssembly application  Code is written in C#, HTML, CSS and JavaScript. Solution is for Visual Studio 2022.</p>
-<p>Repository now contains new version of drivers for Neblio and Doge: VEDriversLite. It is also available as Nuget package. Please check this drivers and documentation.</p>
-<p>We recommend to use VEDriversLite if you need to build app which uses just Neblio or Doge!</p>
-<h2 id="veframework-components">VEFramework components</h2>
-<p>The VEFramework offers lots of different libraries, drivers, components which will reduce code in your application a lot.</p>
-<p><img src="https://ipfs.infura.io/ipfs/QmNrjnNjk7dQKikCo8qZjsKK5J9bw7m8BrJuFXojhwBFJA" alt="VEFramewoents"></p>
-<h2 id="development-with-veframework">Development with VEFramework</h2>
-<p>The most compatible languages are C#, VisualBasic or F#. For lots of applications you can use also different languages and connect backend with use of API or MQTT. This allows to use this framework with more languages such as JavaScript, HTML, Python and others.</p>
-<p><img src="https://ipfs.infura.io/ipfs/QmVYGi34Qpt69GMDjLLoAQtF48GUs6yN5uabE9nPkw3GLX" alt="Development with VEFramework"></p>
-<h1 id="hello-world-with-vedriverslite">Hello World with VEDriversLite</h1>
-<p><a href="https://dotnet.microsoft.com/en-us/download/dotnet/3.1">Install the .NET Core 3.1 SDK.</a></p>
-<p>Create project
-Open console line and create empty folder and ConsoleApplication project</p>
-<pre><code>mkdir CreateAccountExample
-cd CreateAccountExample
-dotnet new console
-dotnet add package VEFramework.VEDriversLite
+<pre><code>   One Paragraph of project description goes here
 </code></pre>
-<p>Write simple code to mint NFT
-Please remember that when you create address you need to load the Neblio and tokens to the address! It is good practice to create VENFT Web wallet for the testing and development. You can request the Airdrop or you can send the Neblio from exchange, Orion wallet or staking desktop wallet.</p>
-<pre><code>using System;
-using VEDriversLite;
-
-namespace CreateAccountExample
-{
-    internal class Program
-    {
-        static async System.Threading.Tasks.Task Main(string[] args)
-        {
-            Console.WriteLine(&quot; Hello World With VEDriversLite!&quot;);
-            var account = new NeblioAccount(); // create NeblioAccount object
-            await account.CreateNewAccount(&quot;mypassword&quot;); // create new account
-            Console.WriteLine($&quot; New Neblio Address: {account.Address}&quot;);
-            Console.WriteLine(&quot; Please load Neblio and tokens to Address and then continue.&quot;);
-            Console.ReadLine(); // wait for enough confirmation on blockhain
-            // create NFT Image object and load simple test data
-            var nft = new VEDriversLite.NFT.ImageNFT(&quot;&quot;)
-            {
-                Name = &quot;My Hello World NFT&quot;,
-                Description = &quot;Hello World NFT for testing.&quot;,
-                ImageLink = &quot;https://MyNFT.image&quot;
-            };
-            var res = await account.MintNFT(nft); // mint NFT with account
-            // process result
-            if (res.Item1)
-                Console.WriteLine($&quot; Minted with Transaction hash: {res.Item2}&quot;);
-            else
-                Console.WriteLine($&quot; Cannot mint NFT: {res.Item2}&quot;);
-        }
-    }
-}
-
+<h2 id="getting-started">Getting Started</h2>
+<pre><code> In this section author explain steps to set up the project locally.To get a local copy up and running
+ 
 </code></pre>
-<p>Then you can run the code</p>
-<pre><code>dotnet restore
-dotnet run
-
+<h2 id="prerequisites">Prerequisites</h2>
+<pre><code> Here author will list what are the software needs to run the projects.
 </code></pre>
-<p>You will see output from this program:</p>
-<p>Here you can see the details of the transaction in the <a href="https://explorer.nebl.io/tx/e28dcb54c5ec1d3e889a19c75d58eea5e684db6968fd2478a98e78415996760c">Neblio Blockchain Explorer.</a></p>
-<h1 id="project-and-code-documentation">Project and Code Documentation</h1>
-<h1 id="first-steps">First Steps</h1>
-<p><a href="https://veframework.com/first-steps/">First Steps with VEDrivers Lite</a></p>
-<h1 id="project-wiki">Project Wiki</h1>
-<p><a href="https://github.com/fyziktom/VirtualEconomyFramework/wiki/Getting-Started-With-VEDriversLite">Wiki</a></p>
-<h1 id="vedriverslite-docfx-documentation">VEDriversLite Docfx documentation</h1>
-<p><a href="https://fyziktom.github.io/VirtualEconomyFramework/api/index.html">VEDriversLite Documentation</a></p>
-<h1 id="supported-platforms">Supported Platforms</h1>
-<p>Project is based on .NET Core 5.0 so it can run on:</p>
+<h2 id="installation">Installation</h2>
+<p>A step by step series that tell you how to get a development env running</p>
+<h2 id="built-with">Built With</h2>
+<p>build tools need to build the project.</p>
+<h2 id="running-the-tests">Running the tests</h2>
+<p>Explain how to run the tests for this project.</p>
+<h2 id="usage">Usage</h2>
+<p>show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.</p>
+<h2 id="roadmap">Roadmap</h2>
+<p>Explain roadmaps for next phase of the project.</p>
 <ul>
-<li>Windows</li>
-<li>Windows 10 IoT</li>
-<li>Linux</li>
-<li>MacOS</li>
-<li>iOS</li>
-<li>Android</li>
-<li>x86, x64, AnyCPU, ARM And other platforms which .NET Core supports.</li>
-</ul>
-<h1 id="projects-in-the-solution">Projects in the solution</h1>
+<li>[ ] Feature 1</li>
+<li>[ ] Feature 2</li>
+<li>[ ] Feature 3
 <ul>
-<li>VEDriversLite - Light version and Actual Recommended! version of Neblio drivers, includes NFT drivers</li>
-<li>TestVEDriversLite - testing utility wih integration tests/examples for VEDriversLite</li>
-<li>VEFrameworkUnitTest - Unit tests project.</li>
-<li>VENFTApp-Blazor - Example of use of VEDriversLite in Blazor WebAssembly App. Contains lots of Blazor components!!!</li>
-<li>VENFTApp-Server - Example of use of VEDriversLite in Blazor Server App. It offers API for lots of VEDriversLite commands.</li>
-<li>VEOnePage - Example of the simple webpage which works as presentation page for some address NFTs. Example was created for Coruzant.com</li>
-<li>VECryptographyUtilities - encrypt and decrypt keys example</li>
+<li>[ ] Nested Feature</li>
 </ul>
-<h1 id="main-features">Main Features</h1>
-<ul>
-<li>Create Blockchain Account and send transactions or NFTs with just few lines of the code</li>
-<li>VEFramework works with multiple blockchains. Now it has support of Neblio and Dogecoin</li>
-<li>Blazor Webassebmly example VE NFT App</li>
-<li>Server App with prepared API for integration existing app or UI with Web3 environments</li>
-<li>Set of drivers/helpers for minting, sell and trade NFTs. Already with Images, Post, Music, Profile, Payment, etc. NFTs.</li>
-<li>Integration of IPFS API which uses Infura.io as IPFS node</li>
-<li>Create blockchain application without need of running own node</li>
-<li>NFT Ownership verification system with creating QR codes/messages</li>
-<li>NFT Events and Tickets system.</li>
-<li>System of P2P NFT encrypted metadata and encrypted filecontainers stored on ipfs</li>
-<li>Encryption with EDCH shared secret algorithm. Dont need to share password between peers, they will calculate it!</li>
-<li>RPC Client for connection the blockchain node</li>
-<li>Neblio Blockchain API wrapper and helper classes</li>
-<li>Drivers for special transactions such as split transactions, multiple token input/output, minting multiple NFTs, etc.</li>
-<li>Dogecoin API wrapper and helper classes.</li>
+</li>
 </ul>
-<p>Other features you can explore in the readme of the specifics projects in the solution.</p>
-<h1 id="contributors-and-development-partners">Contributors and Development Partners</h1>
-<p>Tomas Svoboda - <a href="https://twitter.com/fyziktom">Twitter</a></p>
-<p>RoundSqr - <a href="https://www.roundsqr.com/">Company website</a></p>
-<p>Löwenware - <a href="https://lowenware.com/">Company website</a></p>
-<p>PureCrew - <a href="https://purecrew.cz/">Company website</a></p>
-<p>Francis Karuri - LinkedIn</p>
-<p>We are looking for new contributors. Please feel free to contact me on tomas.svoboda@technicinsider.com</p>
-<p>#Thanks</p>
-<p>Main Thanks goes to Mr. Jan Kuznik. He taught me lots of great knowledge about programming.</p>
-<p>“TestNeblio.exe” utility is Mr.Kuznik design and he agreed to publish it with this project. Many thanks for this great tool.</p>
-<p>Many thanks for Blazor developers. It is absolutelly amazing tool!</p>
-<p>This project uses some other opensource libraries or other tools. Many thanks to all authors of these projects and other opensource projects.</p>
-<ul>
-<li>Neblio – Blockchain solution for Enterprises – <a href="https://github.com/NeblioTeam/neblio">https://github.com/NeblioTeam/neblio</a></li>
-<li>Microsoft - .NET Core, C#, Entity Framework Core - <a href="https://docs.microsoft.com/en-us/dotnet/core/introduction">https://docs.microsoft.com/en-us/dotnet/core/introduction</a></li>
-<li>Blazor - Web Apps with C# - <a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor">https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor</a></li>
-<li>Newtonsoft.Json – JSON parsing library - <a href="https://github.com/JamesNK/Newtonsoft.Json">https://github.com/JamesNK/Newtonsoft.Json</a></li>
-<li>NBitcoin - .NET C# Library for Bitcoin based cryptocurrencies - <a href="https://github.com/MetacoSA/NBitcoin">https://github.com/MetacoSA/NBitcoin</a></li>
-<li>Ant Desing Blazor - Blazor component library - <a href="https://antblazor.com/en-US/">https://antblazor.com/en-US/</a></li>
-<li>BlazorFileReader - File Reader component for Blazor - <a href="https://github.com/Tewr/BlazorFileReader">https://github.com/Tewr/BlazorFileReader</a></li>
-<li>IPFS Http Client C# - Http Api wrapper for IPFS - <a href="https://github.com/richardschneider/net-ipfs-http-client">https://github.com/richardschneider/net-ipfs-http-client</a></li>
-<li>DocFx – API documentation generator - <a href="https://github.com/dotnet/docfx">https://github.com/dotnet/docfx</a></li>
-<li>Swagger – OpenAPI description of REST API - <a href="https://swagger.io/">https://swagger.io/</a></li>
-<li>MQTTNet – library for MQTT connection - <a href="https://github.com/chkr1011/MQTTnet">https://github.com/chkr1011/MQTTnet</a></li>
-<li>Log4net – library for logging - <a href="https://github.com/apache/logging-log4net">https://github.com/apache/logging-log4net</a></li>
-<li>Binance.Net – library for connecting to Binance Exchange - <a href="https://github.com/JKorf/Binance.Net">https://github.com/JKorf/Binance.Net</a></li>
-<li>Jint – library for run JavaScript in C# - <a href="https://github.com/sebastienros/jint">https://github.com/sebastienros/jint</a></li>
-<li>Npgsql – EFC provider for PostgreSQL - <a href="https://github.com/npgsql/efcore.pg">https://github.com/npgsql/efcore.pg</a></li>
-<li>Node.js – JavaScript runtime - <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
-<li>Node-RED – IoT tool for event driven connections -</li>
-<li>Aedes Node-Red node – MQTT Broker - <a href="https://github.com/moscajs/aedes">https://github.com/moscajs/aedes</a></li>
-<li>Paho MQTT – JavaScript library for MQTT client - <a href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></li>
-<li>Chart JS - JavaScript library for charts - <a href="https://github.com/chartjs">https://github.com/chartjs</a></li>
-<li>CodeJar - Simple JavaScript editor - <a href="https://github.com/antonmedv/codejar">https://github.com/antonmedv/codejar</a></li>
-<li>Prism - Code Syntax Highlight library - <a href="https://prismjs.com/">https://prismjs.com/</a></li>
-<li>Crypto JS - JS library of crypto standards - <a href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a></li>
-<li>Chessboard JS - JS library for chess game - <a href="https://chessboardjs.com/">https://chessboardjs.com/</a></li>
-<li>Bootstrap Studio – tool for simplify web-based UI - <a href="https://bootstrapstudio.io/">https://bootstrapstudio.io/</a></li>
-</ul>
-<h1 id="license">License</h1>
-<p>This framework can be used for any use even for commercial use. License is BSD 2 with additional conditions.</p>
-<p>Please read it here:</p>
-<p><a href="https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt">https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt</a></p>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.</p>
+<p>If you have a suggestion that would make this better, please fork the repo and create a pull request.</p>
+<ol>
+<li>Fork the Project</li>
+<li>Create your Feature Branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+<li>Commit your Changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+<li>Push to the Branch (<code>git push origin feature/AmazingFeature</code>)</li>
+<li>Open a Pull Request</li>
+</ol>
+<h2 id="license">License</h2>
+<p>Distributed under the MIT License. See <code>LICENSE.txt</code> for more information.</p>
+<h2 id="contact">Contact</h2>
+<p>Your Name - <a href="https://twitter.com/twitter_handle">@twitter_handle</a> - email@email_client.com</p>
 </article>
               
                 </div>

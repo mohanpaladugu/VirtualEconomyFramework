@@ -19,7 +19,7 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
     1. Open Visual Studio IDE
     2. Create New Project
     3.Select Console Application .NET Core (3.1 or 5.0)
-    4.Right click to your new project in the “Solution Explorer” -> “Manage Nuget Packages…”
+    4.Right click to your new project in the **Solution Explorer** -> **Manage Nuget Packages**
     5.Browse for VEDriversLite and click to “Install”
     6.Add “using VEDriversLite;” to top of your Program.cs
      

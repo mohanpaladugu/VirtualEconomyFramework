@@ -29,7 +29,7 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
 ## Installation
  
-   A step by step series that tell you how to get a development env running
+   [Wiki](https://github.com/fyziktom/VirtualEconomyFramework/wiki/Getting-Started-With-VEDriversLite)
    
 ## Built With
 

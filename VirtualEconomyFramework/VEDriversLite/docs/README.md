@@ -30,41 +30,41 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
 ## Installation
  
-   [Wiki](https://github.com/fyziktom/VirtualEconomyFramework/wiki/Getting-Started-With-VEDriversLite)
+     [Wiki](https://github.com/fyziktom/VirtualEconomyFramework/wiki/Getting-Started-With-VEDriversLite)
    
 ## Built With
 
-   1) .NET 6.0
-   2) Blazer WebAssembly 3.2
-   3) C#.Net
+      1) .NET 6.0
+      2) Blazer WebAssembly 3.2
+      3) C#.Net
 
 ## Running the tests
 
-    Using Xunit .net we are building unit test cases.
+     Using Xunit .net we are building unit test cases.
 
 ## Usage
 
-    show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+      show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 ## Roadmap
 
-   Explain roadmaps for next phase of the project.
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-     - [ ] Nested Feature
+     Explain roadmaps for next phase of the project.
+     - [ ] Feature 1
+     - [ ] Feature 2
+     - [ ] Feature 3
+       - [ ] Nested Feature
 
 ## Contributing
 
-   Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+      Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-   If you have a suggestion that would make this better, please fork the repo and create a pull request.
+      If you have a suggestion that would make this better, please fork the repo and create a pull request.
 
-   1. Fork the Project
-   2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-   3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-   4. Push to the Branch (`git push origin feature/AmazingFeature`)
-   5. Open a Pull Request
+     1. Fork the Project
+     2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+     3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+     4. Push to the Branch (`git push origin feature/AmazingFeature`)
+     5. Open a Pull Request
 
 ## License
 
@@ -76,5 +76,5 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
 ## Contact
 
-  Tomas Svoboda - [Twitter](https://twitter.com/fyziktom)
+     Tomas Svoboda - [Twitter](https://twitter.com/fyziktom)
 

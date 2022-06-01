@@ -14,19 +14,19 @@
 
 ## Installation
  
-   A step by step series that tell you how to get a development env running
+     A step by step series that tell you how to get a development env running
    
 ## Built With
 
-   build tools need to build the project.
+     build tools need to build the project.
 
 ## Running the tests
 
-   Explain how to run the tests for this project.
+    Explain how to run the tests for this project.
 
 ## Usage
 
-   show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+    show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 ## Roadmap
 

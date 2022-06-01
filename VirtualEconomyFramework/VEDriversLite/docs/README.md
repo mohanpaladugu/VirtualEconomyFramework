@@ -16,7 +16,12 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
 ## Getting Started
      
-     In this section author explain steps to set up the project locally.To get a local copy up and running
+    1. Open Visual Studio IDE
+    2. Create New Project
+    3.Select Console Application .NET Core (3.1 or 5.0)
+    4.Right click to your new project in the “Solution Explorer” -> “Manage Nuget Packages…”
+    5.Browse for VEDriversLite and click to “Install”
+    6.Add “using VEDriversLite;” to top of your Program.cs
      
 ## Prerequisites
   

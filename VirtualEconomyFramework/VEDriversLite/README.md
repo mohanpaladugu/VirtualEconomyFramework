@@ -31,9 +31,9 @@
 ## Roadmap
 
     Explain roadmaps for next phase of the project.
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
+    - [ ] Feature 1
+    - [ ] Feature 2
+    - [ ] Feature 3
      - [ ] Nested Feature
 
 ## Contributing

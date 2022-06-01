@@ -1,6 +1,6 @@
 
 ## About The Project
- Virtual Economy framework will help you to create applications related to Web3, Blockchains, IoT, NFTs, Cryptocurrencies and other useful technologies.
+  Virtual Economy framework will help you to create applications related to Web3, Blockchains, IoT, NFTs, Cryptocurrencies and other useful technologies.
 
 This project is OpenSource.
 
@@ -40,11 +40,11 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
 ## Running the tests
 
-   Using Xunit .net we are building unit test cases.
+    Using Xunit .net we are building unit test cases.
 
 ## Usage
 
-   show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+    show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 ## Roadmap
 
@@ -56,25 +56,25 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+   Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request.
+   If you have a suggestion that would make this better, please fork the repo and create a pull request.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+   1. Fork the Project
+   2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+   3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+   4. Push to the Branch (`git push origin feature/AmazingFeature`)
+   5. Open a Pull Request
 
 ## License
 
- This framework can be used for any use even for commercial use. License is BSD 2 with additional conditions.
+    This framework can be used for any use even for commercial use. License is BSD 2 with additional conditions.
 
- Please read it here:
+    Please read it here:
 
- https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt
+    https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt
 
 ## Contact
 
- Tomas Svoboda - [Twitter](https://twitter.com/fyziktom)
+  Tomas Svoboda - [Twitter](https://twitter.com/fyziktom)
 

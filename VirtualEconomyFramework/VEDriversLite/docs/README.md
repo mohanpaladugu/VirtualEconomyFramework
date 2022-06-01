@@ -65,9 +65,13 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+ This framework can be used for any use even for commercial use. License is BSD 2 with additional conditions.
+
+ Please read it here:
+
+ https://github.com/fyziktom/VirtualEconomyFramework/blob/main/License/license.txt
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+ Tomas Svoboda - [Twitter](https://twitter.com/fyziktom)
 

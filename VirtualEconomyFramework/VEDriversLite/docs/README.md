@@ -25,7 +25,8 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
      
 ## Prerequisites
   
-     Here author will list what are the software needs to run the projects.
+    1) Visual studio IDE
+    
 
 ## Installation
  
@@ -33,11 +34,12 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
    
 ## Built With
 
-   build tools need to build the project.
+   1) .NET 6.0
+   2) Blazer WebAssembly 3.2
 
 ## Running the tests
 
-   Explain how to run the tests for this project.
+   Using Xunit .net we are building unit test cases.
 
 ## Usage
 

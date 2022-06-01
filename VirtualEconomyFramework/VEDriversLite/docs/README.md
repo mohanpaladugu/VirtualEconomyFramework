@@ -36,6 +36,7 @@ We recommend to use VEDriversLite if you need to build app which uses just Nebli
 
    1) .NET 6.0
    2) Blazer WebAssembly 3.2
+   3) C#.Net
 
 ## Running the tests
 

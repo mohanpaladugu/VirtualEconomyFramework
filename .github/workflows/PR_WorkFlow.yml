@@ -1,4 +1,4 @@
-name: .NET pull request build
+name: pull request build
 
 on:
   pull_request:
@@ -18,9 +18,7 @@ jobs:
         dotnet-version: '3.1.x'
     
     - name: Install dependencies
-      run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
-    - name: Build
-      run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
+      run: dotnet restore  ./VirtualEconomyFramework
    
     - name: Executing Unit Test
       run: dotnet test ./VirtualEconomyFramework/VEFrameworkUnitTest
